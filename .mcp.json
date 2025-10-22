@@ -1,0 +1,44 @@
+{
+    "mcpServers": {
+      "sequential-thinking": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ]
+      },
+      "mcp-server-firecrawl": {
+        "command": "npx",
+        "args": ["-y", "firecrawl-mcp"],
+        "env": {
+          "FIRECRAWL_API_KEY": "fc-e9c75c7ed0f842629f6c74099d0c30ff",
+          "FIRECRAWL_RETRY_MAX_ATTEMPTS": "5",
+          "FIRECRAWL_RETRY_INITIAL_DELAY": "2000",
+          "FIRECRAWL_RETRY_MAX_DELAY": "30000",
+          "FIRECRAWL_RETRY_BACKOFF_FACTOR": "3",
+          "FIRECRAWL_CREDIT_WARNING_THRESHOLD": "2000",
+          "FIRECRAWL_CREDIT_CRITICAL_THRESHOLD": "500"
+        }
+      },
+      "context7": {
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp", "--api-key", "ctx7sk-74e2e912-e0f2-4ebe-b0cb-874d8622d587"]
+      },
+      "supabase": {
+        "type": "http",
+        "url": "https://mcp.supabase.com/mcp",
+        "headers": {
+          "Authorization": "Bearer sbp_e1b330f1ced3228a41fb5c7aea94962e96434084"
+        }
+      },
+      "n8n": {
+        "command": "npx",
+        "args": ["-y", "@leonardsellem/n8n-mcp-server"],
+        "env": {
+          "N8N_API_URL": "https://flow.agenciaprospect.space/api/v1",
+          "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YmE1NTRiZi1iZTMxLTQ0YTUtYTI0Ny1jMzc4MjFhNTc0MzQiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzYwNzIzNjE3fQ.A-uPsnLXCUSBeynQcQ9n1yAQhFDisl2X4pU3i93MZvs"
+        }
+      }
+    }
+  }
+  
